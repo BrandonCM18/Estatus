@@ -75,11 +75,9 @@ Si ves la entrada com.usuario.monitor, significa que el servicio está funcionan
 ### Capturas de pantalla
 
 1. Captura mostrando el archivo monitor.py en ejecución.
-![Captura de pantalla 1](img/monitor.png)
+![Captura de pantalla 1](img/img1.png)
 2. Captura de la terminal mostrando el comando launchctl list.
- ![Captura de pantalla 2](img/comando.png)
-3. Captura de la configuración del archivo com.usuario.monitor.plist.
- ![Captura de pantalla 2](img/usuario.png)
+ ![Captura de pantalla 2](img/img2.png)
 
 ### Conclusión
 
