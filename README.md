@@ -1,5 +1,3 @@
-Aquí tienes el contenido en formato Markdown correctamente estructurado:
-
 # Proyecto: Monitor de Estado de la Aplicación
 
 Este proyecto consiste en un programa que monitorea el estado de una aplicación y la mantiene ejecutándose automáticamente al inicio de la sesión en macOS. El sistema verifica el estado de la aplicación y la reinicia si es necesario.
@@ -27,12 +25,12 @@ Este proyecto consiste en un programa que monitorea el estado de una aplicación
 
 ### 2. Configuración del archivo `plist`
 
-1. Copia el archivo `com.usuario.monitor.plist` a la carpeta `~/Library/LaunchAgents/`:
+1. **Copia el archivo `com.usuario.monitor.plist` a la carpeta `~/Library/LaunchAgents/`**:
 
    ```bash
    mv com.usuario.monitor.plist ~/Library/LaunchAgents/
 
-	2.	Asegúrate de que el archivo .plist apunte correctamente al script monitor.py. El contenido del archivo debe verse así:
+2. **Asegúrate de que el archivo .plist apunte correctamente al script monitor.py. El contenido del archivo debe verse así**:
 
 <plist version="1.0">
 <dict>
@@ -51,29 +49,31 @@ Este proyecto consiste en un programa que monitorea el estado de una aplicación
 </plist>
 
 
-	3.	Ejecuta el siguiente comando para cargar el servicio en launchctl:
+3. **Ejecuta el siguiente comando para cargar el servicio en launchctl**:
 
 launchctl load ~/Library/LaunchAgents/com.usuario.monitor.plist
 
 Esto hará que el script se ejecute automáticamente cada vez que inicies tu computadora.
 
-3. Ejecutar el Script Manualmente
+### 3. Ejecutar el Script Manualmente
 
-Si deseas ejecutar el script manualmente para probar su funcionamiento, puedes hacerlo con el siguiente comando:
+**Si deseas ejecutar el script manualmente para probar su funcionamiento, puedes hacerlo con el siguiente comando**:
 
+```bash
 python3 /Users/brandoncm18/scripts/monitor.py
+```
+### 4. Verificar que el servicio se está ejecutando
 
-4. Verificar que el servicio se está ejecutando
+**Para verificar que el servicio está activo, ejecuta**:
 
-Para verificar que el servicio está activo, ejecuta:
-
+```bash
 launchctl list | grep com.usuario.monitor
+```
 
 Si ves la entrada com.usuario.monitor, significa que el servicio está funcionando correctamente.
 
-Capturas de pantalla
+### Capturas de pantalla
 
-Aquí se pueden incluir capturas de pantalla del proceso de ejecución del programa, como:
 	1.	Captura mostrando el archivo monitor.py en ejecución.
 	2.	Captura de la terminal mostrando el comando launchctl list.
 	3.	Captura de la configuración del archivo com.usuario.monitor.plist.
